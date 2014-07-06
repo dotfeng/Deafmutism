@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+   <!--  <string name="app_name">语音助手</string> -->
+    <string name="app_name">张大嘴</string>
+    <string name="action_settings">设置</string>
+    <string name="app_id">51e8abf2</string>
+    <string name="click_chat">点击说话</string>
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="please_speak">请说话</string>
+    <string name="desc">imageview</string>
+    <string name="title_hot_words">常用短语</string>
+    <string name="recognizing">识别中</string>
+    <string name="delete">删除</string>
+    <string name="edit">编辑</string>
+    <string name="save">保存</string>
+    <string name="add">新增...</string>
+    <string name="add_more">松开新增...</string>
+    <string-array
+		name="hot_words">
+		<item>你好</item>
+		<item>救命呀</item>
+		<item>这是哪里</item>
+		<item>请帮助我好吗</item>
+		<item>最近的公交站在哪里</item>
+		<item>今天的天气怎么样</item>
+	</string-array>
+    
+        <!--  异常处理-->
+    <string name="network_not_connected">网络连接失败，请检查网络设置</string>
+    <string name="xml_parser_failed">数据解析异常</string>
+    <string name="io_exception_error">文件流异常</string>
+    <string name="http_status_code_error">网络异常，错误码：%d</string>
+    <string name="http_exception_error">网络异常，请求超时</string>
+    <string name="socket_exception_error">网络异常，读取数据超时</string>
+    <string name="app_run_code_error">应用程序运行时异常</string>
+    <string name="app_menu_surelogout">确定退出程序吗？</string>
+    <string
+		name="text_login_fail">登录失败</string>
+    <string name="abnormalserver">服务器端异常</string>
+
+<string name="crash_toast_text">Ooooops ! I crashed, but a report has been sent to my developer to help fix the issue !</string>
+<string name="crash_notif_ticker_text">Unexpected error, please send a report...</string>
+<string name="crash_notif_title">CrashTest has crashed...</string>
+<string name="crash_notif_text">Please click here to help fix the issue.</string>
+
+
+<string name="crash_dialog_title">CrashTest has crashed</string>
+<string name="crash_dialog_text">An unexpected error occurred forcing the
+    application to stop. Please help us fix this by sending us error data,
+    all you have to do is click OK.</string>
+<string name="crash_dialog_comment_prompt">You might add your comments about the problem below:</string>
+<string name="crash_dialog_ok_toast">Thank you !</string>
+
+
+<string
+		name="preference_title_tts">合成设置</string>
+<string
+		name="preference_key_tts_role">tts_role</string>
+<string
+		name="preference_title_tts_role">发音人</string>
+	<string-array
+		name="preference_entries_tts_role">
+		<item>晓燕</item>
+		<item>晓宇</item>
+		<item>小研</item>
+		<item>小琪</item>
+		<item>小峰</item>
+		<item>小梅</item>
+		<item>小莉</item>
+		<item>小蓉</item>
+		<item>小芸</item>
+		<item>小坤</item>
+		<item>小强 </item>
+		<item>小莹</item>
+		<item>小新</item>
+		<item>楠楠</item>
+		<item>老孙</item>
+	</string-array>
+	<string-array
+		name="preference_values_tts_role">
+		<item>xiaoyan</item>
+		<item>xiaoyu</item>
+		<item>vixy</item>
+		<item>vixq</item>
+		<item>vixf</item>
+		<item>vixm</item>
+		<item>vixl</item>
+		<item>vixr</item>
+		<item>vixyun</item>
+		<item>vixk</item>
+		<item>vixqa</item>
+		<item>vixying</item>
+		<item>vixx</item>
+		<item>vinn</item>
+		<item>vils</item>
+	</string-array>
+	<string
+		name="preference_default_tts_role">xiaoyan</string>
+<string
+		name="preference_dialog_title_tts_role">选择发音人</string>
+
+
+	<string
+		name="preference_key_tts_speed">tts_speed</string>
+	<string
+		name="preference_title_tts_speed">语速</string>
+	<string
+		name="preference_default_tts_speed">50</string>
+	<string
+		name="preference_dialog_title_tts_speed">选择语速</string>
+	<string
+		name="preference_key_tts_volume">tts_volume</string>
+	<string
+		name="preference_title_tts_volume">音量</string>
+	<string
+		name="preference_default_tts_volume">50</string>
+	<string
+		name="preference_dialog_title_tts_volume">选择音量</string>
+	<string 
+	    name="preference_key_tts_pitch">tts_pitch</string>
+	<string 
+	    name="preference_title_tts_pitch">语调</string>
+	<string 
+	    name="preference_default_tts_pitch">50</string>
+	<string 
+	    name="preference_dialog_title_tts_pitch">选择语调</string>
+
+	
+	<string
+		name="preference_key_iat_engine">iat_engine</string>
+	<string
+		name="preference_title_iat_engine">听写引擎</string>
+	<string-array
+		name="preference_entries_iat_engine">
+		<item>短信听写</item>
+		<item>地图搜索</item>
+		<item>热词搜索</item>
+		<item>视频搜索</item>
+	</string-array>
+	<string-array
+		name="preference_values_iat_engine">
+		<item>iat</item>
+		<item>poi</item>
+		<item>search</item>
+		<item>video</item>
+	</string-array>
+	<string
+		name="preference_default_iat_engine">iat</string>
+	<string
+		name="preference_dialog_title_iat_engine">选择听写引擎</string>
+	<string
+		name="preference_key_poi_province">poi_province</string>
+	<string
+		name="preference_title_poi_province">地图搜索省份</string>
+	<string-array
+		name="preference_values_poi_province">
+		<item>全选</item>
+	</string-array>
+	<string
+		name="preference_default_poi_province">全选</string>
+	<string
+		name="preference_dialog_title_poi_province">选择地图搜索省份</string>
+	<string
+		name="preference_key_poi_city">poi_city</string>
+	<string
+		name="preference_title_poi_city">地图搜索城市</string>
+	<string-array
+		name="preference_values_poi_city">
+		<item>全选</item>
+	</string-array>
+	<string
+		name="preference_default_poi_city">全选</string>
+	<string
+		name="preference_dialog_title_poi_city">选择地图搜索城市</string>
+	<string
+		name="preference_key_iat_rate">iat_rate</string>
+	<string
+		name="preference_title_iat_rate">录音采样率</string>
+	<string-array
+		name="preference_entries_iat_rate">
+		<item>8K</item>
+		<item>16K</item>
+	</string-array>
+	<string-array
+		name="preference_values_iat_rate">
+		<item>rate8k</item>
+		<item>rate16k</item>
+	</string-array>
+	<string
+		name="preference_default_iat_rate">rate16k</string>
+	<string
+		name="preference_dialog_title_iat_rate">选择听写采样率</string>
+	<string
+		name="preference_key_iat_vad">iat_vad</string>
+	<string
+		name="preference_title_iat_vad">启用端点检测</string>
+</resources>

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/chat_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_chatting"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_bottom" >
+
+        <TextView
+            android:id="@+id/tv_chatting_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="#32CD32"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:id="@+id/iv_chatting_line"
+            android:contentDescription="@string/desc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_chatting_title"
+            android:background="@drawable/line_list" />
+
+        <ListView
+            android:id="@+id/lv_chat_history"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/iv_chatting_line"
+            android:background="@null"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:listSelector="@android:color/transparent"
+            android:scrollbars="vertical"
+            android:transcriptMode="alwaysScroll" />
+
+        <ImageView
+            android:id="@+id/iv_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="18dp"
+            android:contentDescription="@null"
+            android:paddingRight="30dp"
+            android:src="@drawable/setting" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_assistant"
+        android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        android:layout_above="@+id/ll_bottom"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/assistant_view"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="40dp"
+        android:paddingTop="20dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tv_listen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/please_speak"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:id="@+id/iv_parse"
+            android:contentDescription="@string/desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@anim/chat" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#eaeaea"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/iv_keyboard"
+            android:contentDescription="@string/desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/soft_keyboard" />
+
+        <TextView
+            android:id="@+id/tv_click_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="2"
+            android:background="@drawable/confirm"
+            android:gravity="center"
+            android:text="@string/click_chat"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_hot_words"
+            android:contentDescription="@string/desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_hot_word" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_parse"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#eaeaea"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:visibility="invisible" >
+
+        <ImageView
+            android:layout_width="0dp"
+            android:contentDescription="@string/desc"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/cancel_parse"
+            android:visibility="invisible" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@drawable/cancel_parse"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/tv_parse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@anim/chat_parse"
+                android:gravity="center"
+                android:text="@string/recognizing"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/cancel_parse"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_soft_keyboard"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#eaeaea"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:visibility="invisible" >
+
+        <ImageView
+            android:id="@+id/iv_voice"
+            android:contentDescription="@string/desc"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/microphone" />
+
+        <EditText
+            android:id="@+id/et_nput"
+            android:inputType="text"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/tv_confirm"
+            android:layout_toRightOf="@+id/iv_voice"
+            android:gravity="center_vertical|left"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/cancel_parse"
+            android:gravity="center"
+            android:text="@string/confirm" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 下拉刷新的顶部布局 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="bottom"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/mylistview_header_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp" >
+
+        <LinearLayout
+            android:id="@+id/LinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <!-- 显示：“下拉刷新”和“释放刷新”的textview -->
+
+            <TextView
+                android:id="@+id/mylistview_header_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下拉刷新" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp" >
+
+                <!-- 显示：“最后更新时间：” -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="最后更新时间："
+                    android:textSize="12sp" />
+
+                <!-- 显示更新的具体时间 -->
+
+                <TextView
+                    android:id="@+id/mylistview_header_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2013-12-12 12:12:12"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+        <!-- 下拉刷新的那个“向下”或者“向上”的箭头 -->
+
+        <ImageView
+            android:id="@+id/mylistview_header_jiantou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/LinearLayout"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="-35dp"
+            android:src="@drawable/refresh_jiantou" />
+        <!-- 下拉后释放时刷新的圆形进度条 -->
+
+        <ProgressBar
+            android:id="@+id/mylistview_header_progressbar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignLeft="@id/LinearLayout"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="-34dp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

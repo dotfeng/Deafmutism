@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="background_gray">#EDEDED</color>
+    <color name="user_center_background">#F6F2ED</color>
+    <color name="order_odd">#F1F1F1</color>
+    <color name="order_even">#E6E6E6</color>
+    <color name="transparent">#00000000</color>
+    <color name="black">#231815</color>
+    <color name="white">#FFFFFF</color>
+    <color name="red">#CC0000</color>
+    <color name="midtext">#3e3a39</color>
+    <color name="activity_title">#FFFFFF</color>
+
+</resources>

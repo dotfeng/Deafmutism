@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory
+		android:title="@string/preference_title_tts">
+		<ListPreference
+			android:key="@string/preference_key_tts_role"
+			android:title="@string/preference_title_tts_role"
+			android:entries="@array/preference_entries_tts_role"
+			android:entryValues="@array/preference_values_tts_role"
+			android:defaultValue="@string/preference_default_tts_role"
+			android:dialogTitle="@string/preference_dialog_title_tts_role" />
+		<net.fengg.app.deafmutism.ui.SeekBarPreference
+			android:key="@string/preference_key_tts_speed"
+			android:title="@string/preference_title_tts_speed"
+			android:defaultValue="@string/preference_default_tts_speed"
+			android:dialogTitle="@string/preference_dialog_title_tts_speed" />
+		<net.fengg.app.deafmutism.ui.SeekBarPreference
+			android:key="@string/preference_key_tts_volume"
+			android:title="@string/preference_title_tts_volume"
+			android:defaultValue="@string/preference_default_tts_volume"
+			android:dialogTitle="@string/preference_dialog_title_tts_volume" />
+		<net.fengg.app.deafmutism.ui.SeekBarPreference
+			android:key="@string/preference_key_tts_pitch"
+			android:title="@string/preference_title_tts_pitch"
+			android:defaultValue="@string/preference_default_tts_pitch"
+			android:dialogTitle="@string/preference_dialog_title_tts_pitch" />
+		<ListPreference
+			android:key="@string/preference_key_iat_engine"
+			android:title="@string/preference_title_iat_engine"
+			android:entries="@array/preference_entries_iat_engine"
+			android:entryValues="@array/preference_values_iat_engine"
+			android:defaultValue="@string/preference_default_iat_engine"
+			android:dialogTitle="@string/preference_dialog_title_iat_engine" />
+		<ListPreference
+			android:key="@string/preference_key_iat_rate"
+			android:title="@string/preference_title_iat_rate"
+			android:entries="@array/preference_entries_iat_rate"
+			android:entryValues="@array/preference_values_iat_rate"
+			android:defaultValue="@string/preference_default_iat_rate"
+			android:dialogTitle="@string/preference_dialog_title_iat_rate" />
+	</PreferenceCategory>
+</PreferenceScreen>
