@@ -1,6 +1,6 @@
 Deafmutism
 ==========
-
+帮助聋哑人与正常人对话。
 
 ![指引1](https://github.com/dotfeng/Deafmutism/raw/master/Deafmutism/res/drawable-hdpi/help_1.png)
 
