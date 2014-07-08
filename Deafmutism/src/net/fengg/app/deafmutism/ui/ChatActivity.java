@@ -344,7 +344,6 @@ SynthesizerListener {
 		mToast = Toast.makeText(this, "", Toast.LENGTH_LONG);
 		instance = this;
 		cancelBaseDialog();
-		EventBus.getDefault().register(this);
 	}
 
 	@Override
@@ -375,6 +374,7 @@ SynthesizerListener {
 		tv_cancel.setOnClickListener(this);
 		iv_hot_words.setOnClickListener(this);
 		iv_setting.setOnClickListener(this);
+//		EventBus.getDefault().register(this);
 	}
 	
 	
@@ -545,8 +545,8 @@ SynthesizerListener {
 			break;
 
 		case R.id.iv_hot_words:
-			openActivity(HotWordsActivity.class);
-//			openActivityForResult(HotWordsActivity.class);
+//			openActivity(HotWordsActivity.class);
+			openActivityForResult(HotWordsActivity.class);
 			break;
 			
 		case R.id.iv_setting:
@@ -561,7 +561,7 @@ SynthesizerListener {
 	@Override
 	public void onActivityResult(int requestCode, int resultCode, Intent data){
 		switch (requestCode) {
-		case -1:
+		case 0:
 			if(resultCode==Activity.RESULT_OK) {
 				refreshUI(data.getStringExtra("clickedText"), true, ChatMessage.MESSAGE_LEFT);
 			}
@@ -825,7 +825,7 @@ SynthesizerListener {
 		super.onPause();
 	}
 //	使用EventBus传递数据
-	public void onEvent(ItemClickedEvent event) {
+/*	public void onEvent(ItemClickedEvent event) {
 		refreshUI(event.getItem(), true, ChatMessage.MESSAGE_LEFT);
-	}
+	}*/
 }

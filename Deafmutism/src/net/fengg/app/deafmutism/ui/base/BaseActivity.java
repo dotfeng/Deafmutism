@@ -99,7 +99,7 @@ public class BaseActivity extends RoboActivity {
 	}
 
 	protected void openActivityForResult(Class<?> activity){
-		openActivityForResult(activity, -1);
+		openActivityForResult(activity, 0);
 	}
 	
 	protected void openActivityForResult(Class<?> activity, int requestCode) {

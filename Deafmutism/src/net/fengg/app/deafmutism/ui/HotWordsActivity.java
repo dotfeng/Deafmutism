@@ -103,11 +103,10 @@ public class HotWordsActivity extends BaseActivity implements MyListViewListener
 				}else {
 					clickedText = cArrayList.get(position - 1).getText();
 //					使用EventBus传递数据
-					EventBus.getDefault().post(produceEvent());
-//					Intent it = new Intent();  
-//	                it.putExtra("clickedText", clickedText);  
-//	                setResult(Activity.RESULT_OK, it);  
-					
+//					EventBus.getDefault().post(produceEvent());
+					Intent it = new Intent();  
+	                it.putExtra("clickedText", clickedText);  
+	                setResult(Activity.RESULT_OK, it);  
 					finish();
 				}
 			}
