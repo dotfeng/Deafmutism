@@ -162,9 +162,6 @@ SynthesizerListener {
 	/** 隐藏软键盘arg1 **/
 	private final int HIDE_KEYBOARD = 1;
 	
-	/** 显示热词  arg1**/
-	private final int SHOW_HOT = 2;
-
 	/** 隐藏热词  arg1**/
 	private final int HIDE_HOT = 3;
 	
@@ -549,15 +546,7 @@ SynthesizerListener {
 
 		case R.id.iv_hot_words:
 			openActivity(HotWordsActivity.class);
-//			Message msg = handler.obtainMessage();
-//			msg.what = REFRESH_HOT;
-//
-//			if (rl_hot_words.getVisibility() == View.VISIBLE) {
-//				msg.arg1 = HIDE_HOT;
-//			} else {
-//				msg.arg1 = SHOW_HOT;
-//			}
-//			handler.sendMessage(msg);
+//			openActivityForResult(HotWordsActivity.class);
 			break;
 			
 		case R.id.iv_setting:
@@ -573,8 +562,9 @@ SynthesizerListener {
 	public void onActivityResult(int requestCode, int resultCode, Intent data){
 		switch (requestCode) {
 		case -1:
-			if(resultCode==Activity.RESULT_OK)
-			//do something
+			if(resultCode==Activity.RESULT_OK) {
+				refreshUI(data.getStringExtra("clickedText"), true, ChatMessage.MESSAGE_LEFT);
+			}
 			break;
 		}
 	}
@@ -826,12 +816,15 @@ SynthesizerListener {
 	public void onResume() {
 		super.onResume();
 	}
+	public void onDestory() {
+		super.onDestroy();
+		EventBus.getDefault().unregister(this);
+	}
 	@Override
 	public void onPause() {
 		super.onPause();
-		//EventBus.getDefault().unregister(this);
 	}
-	
+//	使用EventBus传递数据
 	public void onEvent(ItemClickedEvent event) {
 		refreshUI(event.getItem(), true, ChatMessage.MESSAGE_LEFT);
 	}

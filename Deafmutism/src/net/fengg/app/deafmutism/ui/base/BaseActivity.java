@@ -98,17 +98,14 @@ public class BaseActivity extends RoboActivity {
 		overridePendingTransition(R.anim.slide_right_in, R.anim.slide_left_out);
 	}
 
-//	protected void openActivityForResult(Class<?> activity){
-//		openActivityForResult(activity, -1, null);
-//	}
-//	
-//	protected void openActivityForResult(Class<?> activity, int requestCode, Bundle bundle) {
-//		Intent intent = new Intent();
-//		if (bundle != null) {
-//			intent.putExtras(bundle);
-//		}
-//		intent.setClass(getApplicationContext(), activity);
-//		startActivityForResult(intent, requestCode, bundle);
-//		overridePendingTransition(R.anim.slide_right_in, R.anim.slide_left_out);
-//	}
+	protected void openActivityForResult(Class<?> activity){
+		openActivityForResult(activity, -1);
+	}
+	
+	protected void openActivityForResult(Class<?> activity, int requestCode) {
+		Intent intent = new Intent();
+		intent.setClass(getApplicationContext(), activity);
+		startActivityForResult(intent, requestCode);
+		overridePendingTransition(R.anim.slide_right_in, R.anim.slide_left_out);
+	}
 }
